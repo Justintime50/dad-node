@@ -16,7 +16,7 @@ npm i dad-tool
 Currently, only 100 random Utah addresses are available. Many more from across the US and other countries are planned to be released soon.
 
 ```javascript
-const dad = require('dad')
+const dad = require('dad-tool')
 const randomAddress = dad.addresses[Math.floor(Math.random() * dad.addresses.length)] 
 
 // Alternatively, pull a specific address by ID
@@ -26,9 +26,9 @@ const randomAddress = dad.addresses[Math.floor(Math.random() * dad.addresses.len
 console.log(randomAddress)
 ```
 
-**Output**
+### Output
 ```javascript
-// Outputs the following:
+// Outputs an entry like the following:
 {
     street1: '525 N WOOD HILL RD',
     street2: '',
