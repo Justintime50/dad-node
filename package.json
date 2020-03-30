@@ -1,0 +1,24 @@
+{
+  "name": "dad-tool",
+  "version": "0.1.0",
+  "description": "Dummy Address Data (DAD) allows you to query a massive dataset for real addresses that are great to be used as dummy data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justintime50/dad.git"
+  },
+  "keywords": [
+    "dummy",
+    "address",
+    "data",
+    "dad"
+  ],
+  "author": "Justintime50",
+  "license": "MIT",
+  "bin": {
+    "dad": "./index.js"
+  }
+}
