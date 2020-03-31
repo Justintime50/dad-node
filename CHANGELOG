@@ -1,0 +1,17 @@
+=== v2.0.0 (2020-03-31)
+
+* Added country to each address
+* Validated addresses and corrected inaccurate items
+* Made all entries strings to keep records uniform (breaking change)
+* Changed all country codes to allow for tag reuse among international addresses - eg: CA = California, CA = Canada (breaking change)
+* Added Australia, Canada, China, and Europian addresses
+
+=== v1.0.2 (2020-03-30)
+
+* Bug fixes and docs updates
+* Added Travis CI testing
+
+=== v1.0.0 (2020-03-30)
+
+* Initial release
+* Pull a random UT address from a list of 100

@@ -11,52 +11,89 @@ Dummy Address Data (DAD) allows you to query a massive dataset for real addresse
 npm i dad-tool
 ```
 
+## Data
+
+Each dataset is built from a much larger dataset and slimmed down to bite size pieces to conserve disk space and resources when retrieving addresses. Each item on an address object will return a string.
+
+Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of available data.
+
+### Australia
+
+All of these files will be found in the `data/australia` directory.
+
+| Filename                   | Locations       | Address Count | Tag    |
+| -------------------------- | --------------- | ------------- | ------ |
+| vt-addresses-slim.min.json | Victoria Area   | 5             | AU_VT  |
+
+### Canada
+
+All of these files will be found in the `data/canada` directory.
+
+| Filename                   | Locations       | Address Count | Tag    |
+| -------------------------- | --------------- | ------------- | ------ |
+| bc-addresses-slim.min.json | BC Area         | 5             | CA_BC  |
+
+### China
+
+All of these files will be found in the `data/china` directory.
+
+| Filename                   | Locations       | Address Count | Tag    |
+| -------------------------- | --------------- | ------------- | ------ |
+| bj-addresses-slim.min.json | Beijing Area    | 1             | CN_BJ  |
+
+### Europe
+
+All of these files will be found in the `data/europe` directory.
+
+| Filename                   | Locations            | Address Count | Tag    |
+| -------------------------- | -------------------- | ------------- | ------ |
+| gb-addresses-slim.min.json | London/England Area  | 5             | EU_GB  |
+
+**Note:** These addresses were generated and *may* not be valid. Steps were taken to correct them to real addresses.
+
+### United States - West
+
+All of these files will be found in the `data/us-west` directory.
+
+| Filename                   | Locations       | Address Count | Tag    |
+| -------------------------- | --------------- | ------------- | ------ |
+| ca-addresses-slim.min.json | Anaheim Area    | 100           | US_CA  |
+| nv-addresses-slim.min.json | Lincoln Area    | 100           | US_NV  |
+| or-addresses-slim.min.json | Portland Area   | 100           | US_OR  |
+| ut-addresses-slim.min.json | Provo Area      | 100           | US_UT  |
+| wa-addresses-slim.min.json | Spokane Area    | 100           | US_WA  |
+
 ## Usage
 
-Each dataset is built from `100 random addresses` of a larger dataset. Minified options are available for quicker loading and smaller file sizes.
-
-### USA - West
-
-| Filename                      | Addresses       | Tag   |
-| ----------------------------- | --------------- | ----  |
-| nv-addresses-slim.json        | Lincoln Area    | NV    |
-| nv-addresses-slim.min.json    | Lincoln Area    | NV    |
-| or-addresses-slim.json        | Portland Area   | OR    |
-| or-addresses-slim.min.json    | Portland Area   | OR    |
-| ut-addresses-slim.json        | Statewide       | UT    |
-| ut-addresses-slim.min.json    | Statewide       | UT    |
-| wa-addresses-slim.json        | Spokane Area    | WA    |
-| wa-addresses-slim.min.json    | Spokane Area    | WA    |
-
-### Not Included Due to Lack of Data
-
-- WY
-
-## Example
+All use case examples are listed here:
 
 ```javascript
-const dad = require('dad-tool') 
+const dad = require('dad-tool')
 
 // Grab a random UT address
-const address = dad.random('UT');
+const address = dad.random('US_UT')
 
 // Alternatively, grab the entire UT list
-// const addresses = dad.list('UT');
+// const addresses = dad.list('US_UT')
 
 console.log(address)
+
+// Alternatively, grab a single item from an address
+// console.log(address.city)
 ```
 
 ### Output
 
+Outputs an entry like the following:
+
 ```javascript
-// Outputs an entry like the following:
 {
-    street1: "231 N 1200 W",
-    street2: "UNIT 104",
-    city: "OREM",
-    state: "UT",
-    zip: 84057,
-    id: 470703
+    street1: '231 N 1200 W',
+    street2: 'UNIT 104',
+    city: 'OREM',
+    state: 'UT',
+    zip: '84057',
+    country: 'US'
 },
 ```
 
@@ -76,8 +113,13 @@ node util/create-slim-json.js
 npx eslint index.js
 ```
 
+## Contributing & Data
+
+This data is very laborious to build - any contributions are welcome! Open a PR or issue with additions or fixes.
+
+As these addresses are public knowledge and open sourced, I take no responsibility for their use. If you'd like an address removed from the list, submit an issue.
+
 ## Attribution
 
-Addresses provided from the [OpenAddress Project](https://openaddresses.io).
-
-Project based on [RRAD](https://github.com/EthanRBrown/rrad).
+- Addresses provided from the [OpenAddress Project](https://openaddresses.io).
+- `DAD` is conceptually based on [RRAD](https://github.com/EthanRBrown/rrad).
