@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+    - 10
+    - 11
+    - 12
+    - node
+
+script:
+    - npm i
+    - npx eslint index.js
+    - npx eslint util/*

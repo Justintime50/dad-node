@@ -1,6 +1,6 @@
 {
   "name": "dad-tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dummy Address Data (DAD) allows you to query a massive dataset for real addresses that are perfect for dummy data.",
   "main": "index.js",
   "scripts": {
