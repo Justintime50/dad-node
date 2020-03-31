@@ -18,7 +18,7 @@ Each dataset is built from `100 random addresses` of a larger dataset. Minified 
 ### USA - West
 
 | Filename                      | Addresses       | Tag   |
-| ----------------------------- | ---------------:| ----: |
+| ----------------------------- | --------------- | ----  |
 | nv-addresses-slim.json        | Lincoln Area    | NV    |
 | nv-addresses-slim.min.json    | Lincoln Area    | NV    |
 | or-addresses-slim.json        | Portland Area   | OR    |
