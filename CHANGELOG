@@ -1,3 +1,11 @@
+=== v2.0.1 (2020-04-01)
+
+* Corrected a few lingering zip codes that were integers instead of strings
+* Corrected Australia country on each record
+* Corrected README
+* Replaced each GB address with a real one including valid zips
+* Added 4 more China addresses to match the size of the other smaller lists
+
 === v2.0.0 (2020-03-31)
 
 * Added country to each address

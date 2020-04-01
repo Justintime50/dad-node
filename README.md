@@ -17,7 +17,7 @@ Each dataset is built from a much larger dataset and slimmed down to bite size p
 
 Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of available data.
 
-### Australia
+## Australia
 
 All of these files will be found in the `data/australia` directory.
 
@@ -25,7 +25,7 @@ All of these files will be found in the `data/australia` directory.
 | -------------------------- | --------------- | ------------- | ------ |
 | vt-addresses-slim.min.json | Victoria Area   | 5             | AU_VT  |
 
-### Canada
+## Canada
 
 All of these files will be found in the `data/canada` directory.
 
@@ -33,25 +33,23 @@ All of these files will be found in the `data/canada` directory.
 | -------------------------- | --------------- | ------------- | ------ |
 | bc-addresses-slim.min.json | BC Area         | 5             | CA_BC  |
 
-### China
+## China
 
 All of these files will be found in the `data/china` directory.
 
 | Filename                   | Locations       | Address Count | Tag    |
 | -------------------------- | --------------- | ------------- | ------ |
-| bj-addresses-slim.min.json | Beijing Area    | 1             | CN_BJ  |
+| bj-addresses-slim.min.json | Beijing Area    | 5             | CN_BJ  |
 
-### Europe
+## Europe
 
 All of these files will be found in the `data/europe` directory.
 
 | Filename                   | Locations            | Address Count | Tag    |
 | -------------------------- | -------------------- | ------------- | ------ |
-| gb-addresses-slim.min.json | London/England Area  | 5             | EU_GB  |
+| gb-addresses-slim.min.json | England Area         | 5             | EU_GB  |
 
-**Note:** These addresses were generated and *may* not be valid. Steps were taken to correct them to real addresses.
-
-### United States - West
+## United States - West
 
 All of these files will be found in the `data/us-west` directory.
 
@@ -113,9 +111,11 @@ node util/create-slim-json.js
 npx eslint index.js
 ```
 
-## Contributing & Data
+## Contributing
 
 This data is very laborious to build - any contributions are welcome! Open a PR or issue with additions or fixes.
+
+## Disclaimer
 
 As these addresses are public knowledge and open sourced, I take no responsibility for their use. If you'd like an address removed from the list, submit an issue.
 
