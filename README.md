@@ -15,43 +15,9 @@ npm i dad-tool
 
 Each dataset is built from a much larger dataset and slimmed down to bite size pieces to conserve disk space and resources when retrieving addresses. Each item on an address object will return a string.
 
-Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of available data.
+Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of accurate data.
 
-## Australia
-
-All of these files will be found in the `data/australia` directory.
-
-| Filename                   | Locations       | Address Count | Tag    |
-| -------------------------- | --------------- | ------------- | ------ |
-| vt-addresses-slim.min.json | Victoria Area   | 5             | AU_VT  |
-
-## Canada
-
-All of these files will be found in the `data/canada` directory.
-
-| Filename                   | Locations       | Address Count | Tag    |
-| -------------------------- | --------------- | ------------- | ------ |
-| bc-addresses-slim.min.json | BC Area         | 5             | CA_BC  |
-
-## China
-
-All of these files will be found in the `data/china` directory.
-
-| Filename                   | Locations       | Address Count | Tag    |
-| -------------------------- | --------------- | ------------- | ------ |
-| bj-addresses-slim.min.json | Beijing Area    | 5             | CN_BJ  |
-
-## Europe
-
-All of these files will be found in the `data/europe` directory.
-
-| Filename                   | Locations            | Address Count | Tag    |
-| -------------------------- | -------------------- | ------------- | ------ |
-| gb-addresses-slim.min.json | England Area         | 5             | EU_GB  |
-
-## United States - West
-
-All of these files will be found in the `data/us-west` directory.
+### Sample Data Sources
 
 | Filename                   | Locations       | Address Count | Tag    |
 | -------------------------- | --------------- | ------------- | ------ |
@@ -60,6 +26,10 @@ All of these files will be found in the `data/us-west` directory.
 | or-addresses-slim.min.json | Portland Area   | 100           | US_OR  |
 | ut-addresses-slim.min.json | Provo Area      | 100           | US_UT  |
 | wa-addresses-slim.min.json | Spokane Area    | 100           | US_WA  |
+
+### All Data Sources
+
+The amount of data is too extensive to list here. View all the [available data sources](DATA.md) you can retrieve addresses from.
 
 ## Usage
 

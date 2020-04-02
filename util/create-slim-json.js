@@ -9,6 +9,6 @@ const dataSet = '' // Which data set are you pulling from?
 const addresses = require(dataSet).addresses
 for (var i = 0; i < slimNumber; i++) {
     var randomAddress = addresses[Math.floor(Math.random() * addresses.length)]
-    fs.appendFileSync(`${dataSet}-${slimNumber}.json`, JSON.stringify(randomAddress))
+    fs.appendFileSync(`${dataSet}-slim.min`, JSON.stringify(randomAddress))
 }
 console.log("Addresses slimmed, make sure to add commas where needed.")
