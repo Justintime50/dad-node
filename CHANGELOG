@@ -1,4 +1,10 @@
-=== v2.1.0 (2020-04-03)
+=== v2.1.1 (2020-04-03)
+
+* Changed if/else statements for switch/case statements to better handle the large variable set
+* Fixed address references introduced in v2.1.0
+* Added better error handling surrounding invalid tags being passed
+
+=== v2.1.0 (2020-04-02)
 
 * Added us-northeast, us-midwest, and us-south addresses
 * Added Germany addresses
