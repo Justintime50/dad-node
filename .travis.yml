@@ -10,3 +10,4 @@ script:
     - npm i
     - npx eslint index.js
     - npx eslint util/*
+    - npx eslint lib/data-router.js

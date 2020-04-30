@@ -19,13 +19,13 @@ Attempts have been made to verify addresses and ensure that street1, city, state
 
 ### Sample Data Sources
 
-| Filename                   | Locations       | Address Count | Tag    |
-| -------------------------- | --------------- | ------------- | ------ |
-| ca-addresses-slim.min.json | Anaheim Area    | 100           | US_CA  |
-| nv-addresses-slim.min.json | Lincoln Area    | 100           | US_NV  |
-| or-addresses-slim.min.json | Portland Area   | 100           | US_OR  |
-| ut-addresses-slim.min.json | Provo Area      | 100           | US_UT  |
-| wa-addresses-slim.min.json | Spokane Area    | 100           | US_WA  |
+| Filename                   | Locations                 | Address Count | Tag    |
+| -------------------------- | ------------------------- | ------------- | ------ |
+| ca-addresses-slim.min.json | California - Anaheim Area | 100           | US_CA  |
+| nv-addresses-slim.min.json | Nevada - Lincoln Area     | 100           | US_NV  |
+| or-addresses-slim.min.json | Oregon - Portland Area    | 100           | US_OR  |
+| ut-addresses-slim.min.json | Utah - Provo Area         | 100           | US_UT  |
+| wa-addresses-slim.min.json | Washington - Spokane Area | 100           | US_WA  |
 
 ### All Data Sources
 
