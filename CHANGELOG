@@ -1,3 +1,9 @@
+=== v2.2.0 (2020-04-30)
+
+* Bug fixes
+* Reference adjustments for GB -> UK addresses
+* Updated docs to match changes and clarified state/area locations
+
 === v2.1.1 (2020-04-03)
 
 * Changed if/else statements for switch/case statements to better handle the large variable set
