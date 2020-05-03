@@ -2,7 +2,7 @@
 
 Dummy Address Data (DAD) allows you to query a massive dataset for real addresses that are perfect for dummy data.
 
-[![Build Status](https://travis-ci.org/justintime50/dad.svg?branch=master)](https://travis-ci.org/justintime50/dad)
+[![Build Status](https://travis-ci.com/justintime50/dad.svg?branch=master)](https://travis-ci.com/justintime50/dad)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 ## Install
