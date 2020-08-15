@@ -1,9 +1,10 @@
 language: node_js
 
 node_js:
-    - 10
     - 11
     - 12
+    - 13
+    - 14
     - node
 
 script:
@@ -11,3 +12,18 @@ script:
     - npx eslint index.js
     - npx eslint util/*
     - npx eslint lib/data-router.js
+    - npx eslint test/*
+    - npm run test
+
+after_success:
+    - npm run coveralls
+
+deploy:
+    provider: npm
+    email: justinpaulhammond@gmail.com
+    api_key:
+        secure: ezcBRHknIlHaUASW5KbW0sV04B5q7Gp+nR9FRax/2k8WDCAqLDqdFABsi32Mn2+Suq0q4c8Qtm0C9DeusxvdWlnvhFmJODd6G6jlgOrqVSAUdYMccvayvxUdltTJLGL7fGc4AMEYO+3b9NDHl6UiKPqNYsFxyPIkONXIDguTkSvq0phc5cPrkCxdfl1VpKIQkwWGlZRlxj9yAPqV+j3o6YdcWuISYwSLPKlHTZ1q/iSMPY/lWP7cyvUSb84RF3MoRxtze4V2DsA+ILPbhNzHOd0bfZiVzp7NffBHEw1mSasChie5PbacscXhLb7C4Sgz1I99cnVEnsgs3GruvvrsTK3X//oMHkMDZ19N8/V80zbYgJuP0OPoyWzSfTuhf2fKttOYFQOYVfztUhc9zRKP5uTAJB+j/dluFqCSl3F6jJBszFY2Gkr4ldj/6sBl3Ya94JVarc+XM06i1zMGtDAYHRRMIubGLqSv2zuueVZ0bzQOmuMg4KA/S3wKatL1CgfzZZyOT3xc/UCCvCnSNVDKqspGnbSRydW59c2qbeAemHYNfYgbEY2/DhrB8FXZLa2H/B9Z/lSjmgnvW78jICX+9CCyzOgjuv+GIiAsl3RNYAd1diFs+hwA2x7YSQL/OoO0maVBDvuec1onAvzSMV0myZTu74dFmX+uiTysjlzw2U8=
+    on:
+        tags: true
+        repo: Justintime50/dad
+    skip_cleanup: 'true'

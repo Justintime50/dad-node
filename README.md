@@ -3,7 +3,9 @@
 Dummy Address Data (DAD) allows you to query a massive dataset for real addresses that are perfect for dummy data.
 
 [![Build Status](https://travis-ci.com/justintime50/dad.svg?branch=master)](https://travis-ci.com/justintime50/dad)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=master)](https://coveralls.io/github/Justintime50/dad?branch=master)
+[![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
+[![Licence](https://img.shields.io/github/license/justintime50/dad)](https://opensource.org/licenses/mit-license.php)
 
 ## Install
 
@@ -79,6 +81,12 @@ node util/create-slim-json.js
 
 ```bash
 npx eslint index.js
+```
+
+### Tests
+
+```bash
+npm run test
 ```
 
 ## Contributing
