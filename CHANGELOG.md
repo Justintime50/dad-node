@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.3.1 (2020-08-15)
+
+* Added more unit tests (100% coverage!)
+* Errors are now properly thrown instead of printing
+
 ## v2.3.0 (2020-08-14)
 
 * Added unit tests

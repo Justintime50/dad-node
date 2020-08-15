@@ -11,7 +11,8 @@ function list(data) {
 // Pull a single random address from a list
 function random(data) {
     const random = require(path.join(__dirname, dataRouter.variables(data)))
-    return random.addresses[Math.floor(Math.random() * random.addresses.length)]
+    const address = random.addresses[Math.floor(Math.random() * random.addresses.length)]
+    return address
 }
 
 exports.list = list

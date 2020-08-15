@@ -7,4 +7,10 @@ describe('Canada Data', () => {
         const address = dad.random('CA_BC')
         assert.equal(address.state, 'BC');
     });
+
+    it('returns a list of BC addresses', () => {
+        const addresses = dad.list('CA_BC')
+        assert.equal(addresses.addresses.length, 5);
+        assert.equal(addresses.addresses[0].state, 'BC')
+    });
 });
