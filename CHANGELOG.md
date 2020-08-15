@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.3.2 (2020-08-15)
+
+* Switched coverage reporting commands and packages (switched `istanbul` to `nyc`)
+
 ## v2.3.1 (2020-08-15)
 
 * Added more unit tests (100% coverage!)

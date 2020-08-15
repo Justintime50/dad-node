@@ -13,7 +13,7 @@ script:
     - npx eslint util/*
     - npx eslint lib/data-router.js
     - npx eslint test/*
-    - npm run test
+    - npm run coverage
 
 after_success:
     - npm run coveralls
