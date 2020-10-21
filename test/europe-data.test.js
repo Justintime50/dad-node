@@ -12,7 +12,7 @@ describe('Europe Data', () => {
         const addresses = dad.list('EU_DE')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].country, 'DE')
         }
     });
@@ -26,7 +26,7 @@ describe('Europe Data', () => {
         const addresses = dad.list('EU_ES')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].country, 'ES')
         }
     });
@@ -40,7 +40,7 @@ describe('Europe Data', () => {
         const addresses = dad.list('EU_UK')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].country, 'UK')
         }
     });
