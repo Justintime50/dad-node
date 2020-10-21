@@ -11,7 +11,10 @@ describe('Europe Data', () => {
     it('returns a list of DE addresses', () => {
         const addresses = dad.list('EU_DE')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].country, 'DE')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].country, 'DE')
+        }
     });
 
     it('returns a ES address', () => {
@@ -22,7 +25,10 @@ describe('Europe Data', () => {
     it('returns a list of ES addresses', () => {
         const addresses = dad.list('EU_ES')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].country, 'ES')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].country, 'ES')
+        }
     });
 
     it('returns a UK address', () => {
@@ -33,6 +39,9 @@ describe('Europe Data', () => {
     it('returns a list of UK addresses', () => {
         const addresses = dad.list('EU_UK')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].country, 'UK')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].country, 'UK')
+        }
     });
 });

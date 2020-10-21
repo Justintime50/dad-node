@@ -1,11 +1,19 @@
+<div align="center">
+
 # Dummy Address Data (DAD)
 
-Dummy Address Data (DAD) allows you to query a massive dataset for real addresses that are perfect for dummy data.
+Retrieve real addresses from all around the world - perfect for dummy data.
 
 [![Build Status](https://travis-ci.com/justintime50/dad.svg?branch=master)](https://travis-ci.com/justintime50/dad)
 [![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=master)](https://coveralls.io/github/Justintime50/dad?branch=master)
 [![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
 [![Licence](https://img.shields.io/github/license/justintime50/dad)](https://opensource.org/licenses/mit-license.php)
+
+<img src="assets/showcase.png" alt="Showcase">
+
+</div>
+
+DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding.
 
 ## Install
 
@@ -101,3 +109,4 @@ As these addresses are public knowledge and open sourced, I take no responsibili
 
 - Addresses provided from the [OpenAddress Project](https://openaddresses.io).
 - `DAD` is conceptually based on [RRAD](https://github.com/EthanRBrown/rrad).
+- Showcase icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.

@@ -12,7 +12,10 @@ describe('United States Data', () => {
     it('returns a list of KS addresses', () => {
         const addresses = dad.list('US_KS')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'KS')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'KS')
+        }
     });
 
 
@@ -25,7 +28,10 @@ describe('United States Data', () => {
     it('returns a list of NY addresses', () => {
         const addresses = dad.list('US_NY')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'NY')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'NY')
+        }
     });
 
 
@@ -38,7 +44,10 @@ describe('United States Data', () => {
     it('returns a list of TX addresses', () => {
         const addresses = dad.list('US_TX')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'TX')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'TX')
+        }
     });
 
 
@@ -51,7 +60,10 @@ describe('United States Data', () => {
     it('returns a list of CA addresses', () => {
         const addresses = dad.list('US_CA')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'CA')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'CA')
+        }
     });
 
     it('returns a NV address', () => {
@@ -62,7 +74,10 @@ describe('United States Data', () => {
     it('returns a list of NV addresses', () => {
         const addresses = dad.list('US_NV')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'NV')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'NV')
+        }
     });
 
     it('returns a OR address', () => {
@@ -73,7 +88,10 @@ describe('United States Data', () => {
     it('returns a list of OR addresses', () => {
         const addresses = dad.list('US_OR')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'OR')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'OR')
+        }
     });
 
     it('returns a UT address', () => {
@@ -84,7 +102,10 @@ describe('United States Data', () => {
     it('returns a list of UT addresses', () => {
         const addresses = dad.list('US_UT')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'UT')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'UT')
+        }
     });
 
     it('returns a WA address', () => {
@@ -95,6 +116,9 @@ describe('United States Data', () => {
     it('returns a list of WA addresses', () => {
         const addresses = dad.list('US_WA')
         assert.strictEqual(addresses.addresses.length, 100);
-        assert.strictEqual(addresses.addresses[0].state, 'WA')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'WA')
+        }
     });
 });

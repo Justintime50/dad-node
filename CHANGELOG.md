@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.4.1 (2020-10-21)
+
+* More verbose testing by iterating each address record to test against instead of just index 0
+
 ## v2.4.0 (2020-10-21)
 
 * Added `China - Honk Kong` addresses
