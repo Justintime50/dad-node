@@ -1,124 +1,206 @@
 /* eslint-env node, mocha */
-const assert = require('assert');
+const assert = require('chai').assert
+const expect = require('chai').expect
 const dad = require('../index')
 
-describe('United States Data', () => {
-    // US Midwest
-    it('returns a KS address', () => {
-        const address = dad.random('US_KS')
-        assert.strictEqual(address.state, 'KS');
+describe('US KS Address Data', function () {
+    const address = dad.random('US_KS')
+    const addresses = dad.list('US_KS')
+
+    it('returns a random KS address', function () {
+        assert.equal(address.state, 'KS');
     });
 
-    it('returns a list of KS addresses', () => {
-        const addresses = dad.list('US_KS')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'KS')
-        }
+    it('returns a list of KS addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of KS addresses`, function () {
+            assert.equal(singleAddress.state, 'KS')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('US NY Address Data', function () {
+    const address = dad.random('US_NY')
+    const addresses = dad.list('US_NY')
+
+    it('returns a random NY address', function () {
+        assert.equal(address.state, 'NY');
     });
 
+    it('returns a list of NY addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
 
-    // US Northeast
-    it('returns a NY address', () => {
-        const address = dad.random('US_NY')
-        assert.strictEqual(address.state, 'NY');
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of NY addresses`, function () {
+            assert.equal(singleAddress.state, 'NY')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+
+describe('US TX Address Data', function () {
+    const address = dad.random('US_TX')
+    const addresses = dad.list('US_TX')
+
+    it('returns a random TX address', function () {
+        assert.equal(address.state, 'TX');
     });
 
-    it('returns a list of NY addresses', () => {
-        const addresses = dad.list('US_NY')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'NY')
-        }
+    it('returns a list of TX addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of TX addresses`, function () {
+            assert.equal(singleAddress.state, 'TX')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+
+describe('US CA Address Data', function () {
+    const address = dad.random('US_CA')
+    const addresses = dad.list('US_CA')
+
+    it('returns a random CA address', function () {
+        assert.equal(address.state, 'CA');
     });
 
+    it('returns a list of CA addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
 
-    // US South
-    it('returns a TX address', () => {
-        const address = dad.random('US_TX')
-        assert.strictEqual(address.state, 'TX');
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of CA addresses`, function () {
+            assert.equal(singleAddress.state, 'CA')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('US NV Address Data', function () {
+    const address = dad.random('US_NV')
+    const addresses = dad.list('US_NV')
+
+    it('returns a random NV address', function () {
+        assert.equal(address.state, 'NV');
     });
 
-    it('returns a list of TX addresses', () => {
-        const addresses = dad.list('US_TX')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'TX')
-        }
+    it('returns a list of NV addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of NV addresses`, function () {
+            assert.equal(singleAddress.state, 'NV')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('US OR Address Data', function () {
+    const address = dad.random('US_OR')
+    const addresses = dad.list('US_OR')
+
+    it('returns a random OR address', function () {
+        assert.equal(address.state, 'OR');
     });
 
+    it('returns a list of OR addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
 
-    // US West
-    it('returns a CA address', () => {
-        const address = dad.random('US_CA')
-        assert.strictEqual(address.state, 'CA');
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of OR addresses`, function () {
+            assert.equal(singleAddress.state, 'OR')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('US UT Address Data', function () {
+    const address = dad.random('US_UT')
+    const addresses = dad.list('US_UT')
+
+    it('returns a random UT address', function () {
+        assert.equal(address.state, 'UT');
     });
 
-    it('returns a list of CA addresses', () => {
-        const addresses = dad.list('US_CA')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'CA')
-        }
+    it('returns a list of UT addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of UT addresses`, function () {
+            assert.equal(singleAddress.state, 'UT')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('US WA Address Data', function () {
+    const address = dad.random('US_WA')
+    const addresses = dad.list('US_WA')
+
+    it('returns a random WA address', function () {
+        assert.equal(address.state, 'WA');
     });
 
-    it('returns a NV address', () => {
-        const address = dad.random('US_NV')
-        assert.strictEqual(address.state, 'NV');
-    });
+    it('returns a list of WA addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
 
-    it('returns a list of NV addresses', () => {
-        const addresses = dad.list('US_NV')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'NV')
-        }
-    });
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of WA addresses`, function () {
+            assert.equal(singleAddress.state, 'WA')
+        });
+    })
 
-    it('returns a OR address', () => {
-        const address = dad.random('US_OR')
-        assert.strictEqual(address.state, 'OR');
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
     });
-
-    it('returns a list of OR addresses', () => {
-        const addresses = dad.list('US_OR')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'OR')
-        }
-    });
-
-    it('returns a UT address', () => {
-        const address = dad.random('US_UT')
-        assert.strictEqual(address.state, 'UT');
-    });
-
-    it('returns a list of UT addresses', () => {
-        const addresses = dad.list('US_UT')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'UT')
-        }
-    });
-
-    it('returns a WA address', () => {
-        const address = dad.random('US_WA')
-        assert.strictEqual(address.state, 'WA');
-    });
-
-    it('returns a list of WA addresses', () => {
-        const addresses = dad.list('US_WA')
-        assert.strictEqual(addresses.addresses.length, 100);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'WA')
-        }
-    });
-});
+})
