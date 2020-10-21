@@ -22,9 +22,10 @@ All of these files will be found in the `data/canada` directory.
 
 All of these files will be found in the `data/china` directory.
 
-| Filename                   | Locations       | Address Count | Tag    |
-| -------------------------- | --------------- | ------------- | ------ |
-| bj-addresses-slim.min.json | Beijing Area    | 5             | CN_BJ  |
+| Filename                   | Locations                 | Address Count | Tag    |
+| -------------------------- | ------------------------- | ------------- | ------ |
+| bj-addresses-slim.min.json | Beijing Area              | 5             | CN_BJ  |
+| hk-addresses-slim.min.json | Hong Kong - Wan Chai Area | 5             | CN_HK  |
 
 ## Europe
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.4.0 (2020-10-21)
+
+* Added `China - Honk Kong` addresses
+
 ## v2.3.2 (2020-08-15)
 
 * Switched coverage reporting commands and packages (switched `istanbul` to `nyc`)
