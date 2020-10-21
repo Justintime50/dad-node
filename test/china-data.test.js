@@ -12,7 +12,7 @@ describe('China Data', () => {
         const addresses = dad.list('CN_BJ')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].country, 'CN')
         }
     });
@@ -26,7 +26,7 @@ describe('China Data', () => {
         const addresses = dad.list('CN_HK')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'Hong Kong')
         }
     });

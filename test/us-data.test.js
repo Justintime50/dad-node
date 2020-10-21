@@ -13,7 +13,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_KS')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'KS')
         }
     });
@@ -29,7 +29,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_NY')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'NY')
         }
     });
@@ -45,7 +45,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_TX')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'TX')
         }
     });
@@ -61,7 +61,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_CA')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'CA')
         }
     });
@@ -75,7 +75,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_NV')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'NV')
         }
     });
@@ -89,7 +89,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_OR')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'OR')
         }
     });
@@ -103,7 +103,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_UT')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'UT')
         }
     });
@@ -117,7 +117,7 @@ describe('United States Data', () => {
         const addresses = dad.list('US_WA')
         assert.strictEqual(addresses.addresses.length, 100);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'WA')
         }
     });

@@ -12,7 +12,7 @@ describe('Canada Data', () => {
         const addresses = dad.list('CA_BC')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'BC')
         }
     });

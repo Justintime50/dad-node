@@ -12,7 +12,7 @@ describe('Australia Data', () => {
         const addresses = dad.list('AU_VT')
         assert.strictEqual(addresses.addresses.length, 5);
         var i
-        while (i < addresses.length) {
+        while (i <= addresses.length) {
             assert.strictEqual(addresses.addresses[i].state, 'VIC')
         }
     });
