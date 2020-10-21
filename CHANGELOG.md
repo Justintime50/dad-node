@@ -1,8 +1,11 @@
 # CHANGELOG
 
-## v2.4.1 (2020-10-21)
+## v2.5.0 (2020-10-21)
 
-* More verbose testing by iterating each address record to test against instead of just index 0
+* Overhauled testing framework
+  * Introduced `chai` for better `assert` and `expect`
+  * Went from ~50 tests to ~1700 tests by iterating each record
+  * Added tests to ensure the data structure of each record was uniform by asserting keys were the same across every record - corrected a few records with bad keys
 
 ## v2.4.0 (2020-10-21)
 

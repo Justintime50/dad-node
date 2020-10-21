@@ -1,19 +1,29 @@
 /* eslint-env node, mocha */
-const assert = require('assert');
+const assert = require('chai').assert
+const expect = require('chai').expect
 const dad = require('../index')
 
-describe('Canada Data', () => {
-    it('returns a BC address', () => {
-        const address = dad.random('CA_BC')
-        assert.strictEqual(address.state, 'BC');
+describe('CA BC Address Data', function () {
+    const address = dad.random('CA_BC')
+    const addresses = dad.list('CA_BC')
+
+    it('returns a random BC address', function () {
+        assert.equal(address.state, 'BC');
     });
 
-    it('returns a list of BC addresses', () => {
-        const addresses = dad.list('CA_BC')
-        assert.strictEqual(addresses.addresses.length, 5);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'BC')
-        }
+    it('returns a list of BC addresses with a length of 5', function () {
+        assert.equal(addresses.addresses.length, 5);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of BC addresses`, function () {
+            assert.equal(singleAddress.state, 'BC')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
     });
-});
+})

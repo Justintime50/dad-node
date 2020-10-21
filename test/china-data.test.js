@@ -1,33 +1,54 @@
 /* eslint-env node, mocha */
-const assert = require('assert');
+const assert = require('chai').assert
+const expect = require('chai').expect
 const dad = require('../index')
 
-describe('China Data', () => {
-    it('returns a BJ address', () => {
-        const address = dad.random('CN_BJ')
-        assert.strictEqual(address.country, 'CN');
+describe('CN BJ Address Data', function () {
+    const address = dad.random('CN_BJ')
+    const addresses = dad.list('CN_BJ')
+
+    it('returns a random BJ address', function () {
+        assert.equal(address.country, 'CN');
     });
 
-    it('returns a list of BJ addresses', () => {
-        const addresses = dad.list('CN_BJ')
-        assert.strictEqual(addresses.addresses.length, 5);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].country, 'CN')
-        }
+    it('returns a list of BJ addresses with a length of 5', function () {
+        assert.equal(addresses.addresses.length, 5);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of BJ addresses`, function () {
+            assert.equal(singleAddress.country, 'CN')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
+describe('CN HK Address Data', function () {
+    const address = dad.random('CN_HK')
+    const addresses = dad.list('CN_HK')
+
+    it('returns a random HK address', function () {
+        assert.equal(address.state, 'Hong Kong');
     });
 
-    it('returns a HK address', () => {
-        const address = dad.random('CN_HK')
-        assert.strictEqual(address.state, 'Hong Kong');
-    });
+    it('returns a list of HK addresses with a length of 5', function () {
+        assert.equal(addresses.addresses.length, 5);
+    })
 
-    it('returns a list of HK addresses', () => {
-        const addresses = dad.list('CN_HK')
-        assert.strictEqual(addresses.addresses.length, 5);
-        var i
-        while (i <= addresses.length) {
-            assert.strictEqual(addresses.addresses[i].state, 'Hong Kong')
-        }
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of HK addresses`, function () {
+            assert.equal(singleAddress.state, 'Hong Kong')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
     });
-});
+})
