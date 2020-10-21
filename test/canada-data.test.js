@@ -11,6 +11,9 @@ describe('Canada Data', () => {
     it('returns a list of BC addresses', () => {
         const addresses = dad.list('CA_BC')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].state, 'BC')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'BC')
+        }
     });
 });

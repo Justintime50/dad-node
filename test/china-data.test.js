@@ -11,7 +11,10 @@ describe('China Data', () => {
     it('returns a list of BJ addresses', () => {
         const addresses = dad.list('CN_BJ')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].country, 'CN')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].country, 'CN')
+        }
     });
 
     it('returns a HK address', () => {
@@ -22,6 +25,9 @@ describe('China Data', () => {
     it('returns a list of HK addresses', () => {
         const addresses = dad.list('CN_HK')
         assert.strictEqual(addresses.addresses.length, 5);
-        assert.strictEqual(addresses.addresses[0].state, 'Hong Kong')
+        var i
+        while (i < addresses.length) {
+            assert.strictEqual(addresses.addresses[i].state, 'Hong Kong')
+        }
     });
 });
