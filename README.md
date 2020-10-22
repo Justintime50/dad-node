@@ -2,7 +2,7 @@
 
 # Dummy Address Data (DAD)
 
-Retrieve real addresses from all around the world - perfect for dummy data.
+Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
 [![Build Status](https://travis-ci.com/justintime50/dad.svg?branch=master)](https://travis-ci.com/justintime50/dad)
 [![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=master)](https://coveralls.io/github/Justintime50/dad?branch=master)
