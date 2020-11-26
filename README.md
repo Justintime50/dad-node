@@ -68,6 +68,7 @@ All of these files will be found in the `data/united-states` directory.
 
 | Filename                        | Locations                 | Address Count | Tag    |
 | ------------------------------- | ------------------------- | ------------- | ------ |
+| united-states/az-addresses.json | Arizona - Gilbert Area    | 100           | US_AZ  |
 | united-states/ca-addresses.json | California - Anaheim Area | 100           | US_CA  |
 | united-states/id-addresses.json | Idaho - Boise Area        | 100           | US_ID  |
 | united-states/ks-addresses.json | Kansas - Barton County    | 100           | US_KS  |

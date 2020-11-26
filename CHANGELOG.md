@@ -3,7 +3,7 @@
 ## v2.6.0 (2020-11-25)
 
 * Shifted logic around, renamed files and lists, updated documentation, consolidated all US data into a single folder
-* Added Idaho to US_ID
+* Added Idaho to US_ID and Arizona to US_AZ
 * Completely re-wrote the `create-slim-json` utility. It now requires much less manual work, accepts more configuration options, and runs much faster while being more reliable
 
 ## v2.5.0 (2020-10-21)

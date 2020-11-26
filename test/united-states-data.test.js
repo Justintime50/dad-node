@@ -3,6 +3,31 @@ const assert = require('chai').assert
 const expect = require('chai').expect
 const dad = require('../index')
 
+describe('US AZ Address Data', function () {
+    const address = dad.random('US_AZ')
+    const addresses = dad.list('US_AZ')
+
+    it('returns a random AZ address', function () {
+        assert.equal(address.state, 'AZ');
+    });
+
+    it('returns a list of AZ addresses with a length of 100', function () {
+        assert.equal(addresses.addresses.length, 100);
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`returns "${singleAddress.street1}" from a list of AZ addresses`, function () {
+            assert.equal(singleAddress.state, 'AZ')
+        });
+    })
+
+    addresses.addresses.forEach(function (singleAddress) {
+        it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+            expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
+        });
+    });
+})
+
 describe('US CA Address Data', function () {
     const address = dad.random('US_CA')
     const addresses = dad.list('US_CA')
