@@ -1,0 +1,109 @@
+{
+    "addresses": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "unit": "",
+                "number": "6242",
+                "street": "N SWEET VALLEY PL",
+                "city": "MERIDIAN",
+                "district": "",
+                "region": "",
+                "postcode": "83646",
+                "hash": "f6fb34d0cf8a8d3d"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.3698397,
+                    43.6615879
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "unit": "",
+                "number": "6268",
+                "street": "N SWEET VALLEY PL",
+                "city": "MERIDIAN",
+                "district": "",
+                "region": "",
+                "postcode": "83646",
+                "hash": "66419a5fd05468bd"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.3698534,
+                    43.6617774
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "unit": "",
+                "number": "6294",
+                "street": "N SWEET VALLEY PL",
+                "city": "MERIDIAN",
+                "district": "",
+                "region": "",
+                "postcode": "83646",
+                "hash": "9ec51cc46fe8638c"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.3698515,
+                    43.6619784
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "unit": "",
+                "number": "6326",
+                "street": "N SWEET VALLEY PL",
+                "city": "MERIDIAN",
+                "district": "",
+                "region": "",
+                "postcode": "83646",
+                "hash": "e657d41aa701353a"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.3696962,
+                    43.6623059
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "",
+                "unit": "",
+                "number": "6352",
+                "street": "N SWEET VALLEY PL",
+                "city": "MERIDIAN",
+                "district": "",
+                "region": "",
+                "postcode": "83646",
+                "hash": "d3c6128dcc2e9e28"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.3699588,
+                    43.6624559
+                ]
+            }
+        }
+    ]
+}
