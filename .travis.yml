@@ -10,9 +10,9 @@ node_js:
 script:
     - npm i
     - npx eslint index.js
-    - npx eslint utils/*
+    - npx eslint utils/*.js
     - npx eslint lib/data-router.js
-    - npx eslint test/*
+    - npx eslint test/*.js
     - npm run coverage
 
 after_success:
