@@ -23,13 +23,13 @@ npm i dad-tool
 
 ## Address Data
 
-Address objects will look like the [sample below](#output). The data type of each field on an address object is a string.
+Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a string.
 
 Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of accurate data.
 
-## Australia
+The following files can be found in the `data` directory.
 
-All of these files will be found in the `data/australia` directory.
+## Australia
 
 | Filename                    | Locations       | Address Count | Tag    |
 | --------------------------- | --------------- | ------------- | ------ |
@@ -37,15 +37,11 @@ All of these files will be found in the `data/australia` directory.
 
 ## Canada
 
-All of these files will be found in the `data/canada` directory.
-
 | Filename                 | Locations       | Address Count | Tag    |
 | ------------------------ | --------------- | ------------- | ------ |
 | canada/bc-addresses.json | BC Area         | 5             | CA_BC  |
 
 ## China
-
-All of these files will be found in the `data/china` directory.
 
 | Filename                | Locations                 | Address Count | Tag    |
 | ----------------------- | ------------------------- | ------------- | ------ |
@@ -54,8 +50,6 @@ All of these files will be found in the `data/china` directory.
 
 ## Europe
 
-All of these files will be found in the `data/europe` directory.
-
 | Filename                 | Locations                     | Address Count | Tag    |
 | ------------------------ | ----------------------------- | ------------- | ------ |
 | europe/de-addresses.json | Germany - Wesel Area          | 5             | EU_DE  |
@@ -63,8 +57,6 @@ All of these files will be found in the `data/europe` directory.
 | europe/uk-addresses.json | United Kingdom - England Area | 5             | EU_UK  |
 
 ## United States
-
-All of these files will be found in the `data/united-states` directory.
 
 | Filename                        | Locations                 | Address Count | Tag    |
 | ------------------------------- | ------------------------- | ------------- | ------ |
@@ -98,9 +90,9 @@ console.log(address)
 // console.log(address.city)
 ```
 
-### Output
+### Sample Address Object
 
-Outputs an entry like the following:
+A sample address object will look like the following:
 
 ```javascript
 {
@@ -110,7 +102,7 @@ Outputs an entry like the following:
     state: 'UT',
     zip: '84057',
     country: 'US'
-},
+}
 ```
 
 ## Development
@@ -130,10 +122,10 @@ npm run coverage
 
 ### Utilities
 
-To create the slim lists from a larger dataset, use the `create-slim-json.js` tool in the `util` folder.
+To create the slim lists from a larger dataset, use the `create-slim-json.js` tool in the `utils` folder. See the script for additional information. This tool will grab 100 random addresses (by default) from a larger JSON dataset and create a new slim file that can be added to DAD.
 
 ```bash
-node util/create-slim-json.js
+DATA_SET=path/to/dataset.json STATE=UT COUNTRY=US node utils/create-slim-json.js
 ```
 
 ## Contributing
