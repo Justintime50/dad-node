@@ -13,7 +13,7 @@ Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
 </div>
 
-DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding.
+DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding. Rigorously tested with 2000+ tests, rest easy knowing your address data is uniform, present, and rock solid, all while being incredibly performant when retrieving records.
 
 ## Install
 
@@ -21,25 +21,55 @@ DAD is the perfect companion to quickly bootstrap address data in your applicati
 npm i dad-tool
 ```
 
-## Data
+## Address Data
 
-Each dataset is built from a much larger dataset and slimmed down to bite size pieces to conserve disk space and resources when retrieving addresses. Each item on an address object will return a string.
+Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a string.
 
 Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of accurate data.
 
-### Sample Data Sources
+The following files can be found in the `data` directory.
 
-| Filename                   | Locations                 | Address Count | Tag    |
-| -------------------------- | ------------------------- | ------------- | ------ |
-| ca-addresses-slim.min.json | California - Anaheim Area | 100           | US_CA  |
-| nv-addresses-slim.min.json | Nevada - Lincoln Area     | 100           | US_NV  |
-| or-addresses-slim.min.json | Oregon - Portland Area    | 100           | US_OR  |
-| ut-addresses-slim.min.json | Utah - Provo Area         | 100           | US_UT  |
-| wa-addresses-slim.min.json | Washington - Spokane Area | 100           | US_WA  |
+## Australia
 
-### All Data Sources
+| Filename                    | Locations       | Address Count | Tag    |
+| --------------------------- | --------------- | ------------- | ------ |
+| australia/vt-addresses.json | Victoria Area   | 5             | AU_VT  |
 
-The amount of data is too extensive to list here. View all the [available data sources](DATA.md) you can retrieve addresses from.
+## Canada
+
+| Filename                 | Locations       | Address Count | Tag    |
+| ------------------------ | --------------- | ------------- | ------ |
+| canada/bc-addresses.json | BC Area         | 5             | CA_BC  |
+
+## China
+
+| Filename                | Locations                 | Address Count | Tag    |
+| ----------------------- | ------------------------- | ------------- | ------ |
+| china/bj-addresses.json | Beijing Area              | 5             | CN_BJ  |
+| china/hk-addresses.json | Hong Kong - Wan Chai Area | 5             | CN_HK  |
+
+## Europe
+
+| Filename                 | Locations                     | Address Count | Tag    |
+| ------------------------ | ----------------------------- | ------------- | ------ |
+| europe/de-addresses.json | Germany - Wesel Area          | 5             | EU_DE  |
+| europe/es-addresses.json | Spain - Countrywide           | 5             | EU_ES  |
+| europe/uk-addresses.json | United Kingdom - England Area | 5             | EU_UK  |
+
+## United States
+
+| Filename                        | Locations                 | Address Count | Tag    |
+| ------------------------------- | ------------------------- | ------------- | ------ |
+| united-states/az-addresses.json | Arizona - Gilbert Area    | 100           | US_AZ  |
+| united-states/ca-addresses.json | California - Anaheim Area | 100           | US_CA  |
+| united-states/id-addresses.json | Idaho - Boise Area        | 100           | US_ID  |
+| united-states/ks-addresses.json | Kansas - Barton County    | 100           | US_KS  |
+| united-states/nv-addresses.json | Nevada - Lincoln Area     | 100           | US_NV  |
+| united-states/ny-addresses.json | New York - Rochester Area | 100           | US_NY  |
+| united-states/or-addresses.json | Oregon - Portland Area    | 100           | US_OR  |
+| united-states/tx-addresses.json | Texas - Austin Area       | 100           | US_TX  |
+| united-states/ut-addresses.json | Utah - Provo Area         | 100           | US_UT  |
+| united-states/wa-addresses.json | Washington - Spokane Area | 100           | US_WA  |
 
 ## Usage
 
@@ -60,9 +90,9 @@ console.log(address)
 // console.log(address.city)
 ```
 
-### Output
+### Sample Address Object
 
-Outputs an entry like the following:
+A sample address object will look like the following:
 
 ```javascript
 {
@@ -72,29 +102,30 @@ Outputs an entry like the following:
     state: 'UT',
     zip: '84057',
     country: 'US'
-},
+}
 ```
 
 ## Development
 
+When adding or editing a list, ensure the file is minimized and does not exceed 100 records.
+
+```bash
+# Lint a file
+npx eslint index.js
+
+# Run tests
+npm run test
+
+# Run test coverage
+npm run coverage
+```
+
 ### Utilities
 
-To create the slim lists from a larger dataset, use the `create-slim-json.js` tool in the `util` folder.
+To create the slim lists from a larger dataset, use the `create-slim-json.js` tool in the `utils` folder. See the script for additional information. This tool will grab 100 random addresses (by default) from a larger JSON dataset and create a new slim file that can be added to DAD.
 
 ```bash
-node util/create-slim-json.js
-```
-
-### Linting
-
-```bash
-npx eslint index.js
-```
-
-### Tests
-
-```bash
-npm run test
+DATA_SET=path/to/dataset.json STATE=UT COUNTRY=US node utils/create-slim-json.js
 ```
 
 ## Contributing
