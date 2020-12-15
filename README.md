@@ -13,7 +13,7 @@ Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
 </div>
 
-DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding. Rigorously tested with 2000+ tests, rest easy knowing your address data is uniform, present, and rock solid, all while being incredibly performant when retrieving records.
+DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding. Rigorously tested with 2000+ tests, rest easy knowing your address data is uniform, accurate, and performant.
 
 ## Install
 
@@ -55,6 +55,12 @@ The following files can be found in the `data` directory.
 | europe/de-addresses.json | Germany - Wesel Area          | 5             | EU_DE  |
 | europe/es-addresses.json | Spain - Countrywide           | 5             | EU_ES  |
 | europe/uk-addresses.json | United Kingdom - England Area | 5             | EU_UK  |
+
+## Mexico
+
+| Filename                 | Locations                     | Address Count | Tag    |
+| ------------------------ | ----------------------------- | ------------- | ------ |
+| mexico/mx-addresses.json | Mexico - Mexico City Area     | 5             | MX_MX  |
 
 ## United States
 
