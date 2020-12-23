@@ -18,12 +18,16 @@ DAD is the perfect companion to quickly bootstrap address data in your applicati
 ## Install
 
 ```bash
+# Install globally for CLI implementation
+npm i -g dad-tool
+
+# Install locally for package implementation
 npm i dad-tool
 ```
 
 ## Address Data
 
-Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a string.
+Address objects will look like the [sample below](#sample-address-object). The data type of each field on an address object is a `string`. A list of addresses is an `array` of `json` objects.
 
 Attempts have been made to verify addresses and ensure that street1, city, state, and zip are present on all records. Some lists may be shorter than others to avoid complexity or because of a lack of accurate data.
 
@@ -73,7 +77,14 @@ The following files can be found in the `data` directory.
 
 ## Usage
 
-All use case examples are listed here:
+### CLI Implementation
+
+```bash
+# Returns a random address from a list to console
+dad US_UT
+```
+
+### Package Implementation
 
 ```javascript
 const dad = require('dad-tool')
@@ -82,12 +93,12 @@ const dad = require('dad-tool')
 const address = dad.random('US_UT')
 
 // Alternatively, grab the entire UT list
-// const addresses = dad.list('US_UT')
+const addresses = dad.list('US_UT')
 
+// Print to console or do whatever you'd like with the address data
 console.log(address)
-
-// Alternatively, grab a single item from an address
-// console.log(address.city)
+console.log(addresses)
+console.log(address.city)
 ```
 
 ### Sample Address Object
