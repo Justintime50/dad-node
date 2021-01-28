@@ -97,28 +97,44 @@ const dad = require('dad-tool')
 
 // Grab a random UT address
 const address = dad.random('US_UT')
+console.log(address)
 
 // Alternatively, grab the entire UT list
 const addresses = dad.list('US_UT')
+console.log(addresses)
 
 // Print to console or do whatever you'd like with the address data
-console.log(address)
-console.log(addresses)
 console.log(address.city)
+
+// Get the list of all ISO country codes
+const isoData = dad.isoCountryCodes()
+for (let i = 0; i < isoData.length; i++) {
+    console.log(JSON.stringify(isoData[i], null, 4))
+}
 ```
 
 ### Sample Address Object
 
 A sample address object will look like the following:
 
-```javascript
+```json
 {
-    street1: '231 N 1200 W',
-    street2: 'UNIT 104',
-    city: 'OREM',
-    state: 'UT',
-    zip: '84057',
-    country: 'US'
+    "street1": "231 N 1200 W",
+    "street2": "UNIT 104",
+    "city": "OREM",
+    "state": "UT",
+    "zip": "84057",
+    "country": "US"
+}
+```
+
+### Sample ISO Country Object
+
+```json
+{
+    "country": "United States of America",
+    "alpha_2_code": "US",
+    "alpha_3_code": "USA"
 }
 ```
 

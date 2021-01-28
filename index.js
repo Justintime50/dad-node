@@ -15,5 +15,12 @@ function random(data) {
     return address
 }
 
+// Get a list of all ISO country codes
+function isoCountryCodes() {
+    const isoData = require('./data/iso-data/country-codes.json')
+    return isoData
+}
+
 exports.list = list
 exports.random = random
+exports.isoCountryCodes = isoCountryCodes
