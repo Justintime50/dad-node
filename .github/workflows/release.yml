@@ -1,0 +1,10 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release project
+        # TODO
