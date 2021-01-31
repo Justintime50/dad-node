@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v3.0.0 (2021-01-31)
+
+* Adds CLI implementation so you can retrieve addresses right on the command line
+* Adds support for ISO country codes, now you can retrieve the 2 and 3 letter country codes for each country
+* Adds Mexico addresses
+* Switches Travis CI for GitHub Actions
+* Various small tweaks and improvements
+
 ## v2.6.0 (2020-11-25)
 
 * Shifted logic around, renamed files and lists, updated documentation, consolidated all US data into a single folder
