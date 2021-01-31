@@ -1,0 +1,39 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install dependencies
+        run: npm install
+      - name: Run Eslint
+        run: npx eslint --ignore-pattern 'node_modules' --ignore-pattern 'coverage' .
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nodeversion: ["10", "12", "14"]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.nodeversion }}
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run coverage
+      - name: Coveralls
+        if: github.ref == 'refs/heads/main'
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
