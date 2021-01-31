@@ -4,8 +4,8 @@
 
 Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
-[![Build Status](https://travis-ci.com/justintime50/dad.svg?branch=master)](https://travis-ci.com/justintime50/dad)
-[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=master)](https://coveralls.io/github/Justintime50/dad?branch=master)
+[![Build Status](https://github.com/Justintime50/dad/workflows/build/badge.svg)](https://github.com/Justintime50/dad/actions)
+[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/dad?branch=main)
 [![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
 [![Licence](https://img.shields.io/github/license/justintime50/dad)](https://opensource.org/licenses/mit-license.php)
 
