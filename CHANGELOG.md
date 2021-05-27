@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v3.1.0 (2021-05-26)
+
+* Drops support for Node 10 and pins Node 12 as the minimum version
+* Bumps dependencies
+* Tests against Node 16
+
 ## v3.0.0 (2021-01-31)
 
 * Adds CLI implementation so you can retrieve addresses right on the command line
