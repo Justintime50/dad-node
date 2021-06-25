@@ -1,19 +1,19 @@
 <div align="center">
 
-# Dummy Address Data (DAD)
+# Dummy Address Data (DAD) Node Library
 
 Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
-[![Build Status](https://github.com/Justintime50/dad/workflows/build/badge.svg)](https://github.com/Justintime50/dad/actions)
-[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/dad?branch=main)
+[![Build Status](https://github.com/Justintime50/dad-node/workflows/build/badge.svg)](https://github.com/Justintime50/dad-node/actions)
+[![Coverage Status](https://coveralls.io/repos/github/Justintime50/dad-node/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/dad-node?branch=main)
 [![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
-[![Licence](https://img.shields.io/github/license/justintime50/dad)](https://opensource.org/licenses/mit-license.php)
+[![Licence](https://img.shields.io/github/license/justintime50/dad-node)](https://opensource.org/licenses/mit-license.php)
 
 <img src="assets/showcase.png" alt="Showcase">
 
 </div>
 
-DAD is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding. Rigorously tested with 2000+ tests, rest easy knowing your address data is uniform, accurate, and performant.
+The DAD Node library is the perfect companion to quickly bootstrap address data in your application. DAD provides real addresses from all over the world with a consistent data structure so you can spend less time looking up addresses and address rules and more time coding. Rigorously tested with 2000+ tests, rest easy knowing your address data is uniform, accurate, and performant.
 
 ## Install
 
@@ -140,8 +140,6 @@ A sample address object will look like the following:
 
 ## Development
 
-When adding or editing a list, ensure the file is minimized and does not exceed 100 records.
-
 ```bash
 # Lint a file
 npx eslint index.js
@@ -153,24 +151,7 @@ npm run test
 npm run coverage
 ```
 
-### Utilities
-
-To create the slim lists from a larger dataset, use the `create-slim-json.js` tool in the `utils` folder. See the script for additional information. This tool will grab 100 random addresses (by default) from a larger JSON dataset and create a new slim file that can be added to DAD.
-
-```bash
-DATA_SET=path/to/dataset.json STATE=UT COUNTRY=US node utils/create-slim-json.js
-```
-
-## Contributing
-
-This data is very laborious to build - any contributions are welcome! Open a PR or issue with additions or fixes.
-
-## Disclaimer
-
-As these addresses are public knowledge and open sourced, I take no responsibility for their use. If you'd like an address removed from the list, submit an issue.
-
 ## Attribution
 
-- Addresses provided from the [OpenAddress Project](https://openaddresses.io).
-- `DAD` is conceptually based on [RRAD](https://github.com/EthanRBrown/rrad).
+- Addresses provided by [DAD](https://github.com/justintime50/dad).
 - Showcase icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## NEXT RELEASE
+
+* Separates DAD address data into a separate repo, removes tooling and references to data and focuses instead on implementing a way to retrieve that data via Node
+
 ## v3.1.0 (2021-05-26)
 
 * Drops support for Node 10 and pins Node 12 as the minimum version
