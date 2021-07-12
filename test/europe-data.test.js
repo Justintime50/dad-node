@@ -9,23 +9,23 @@ describe('EU DE Address Data', function () {
 
     it('returns a random DE address', function () {
         assert.equal(address.country, 'DE');
-    });
+    })
 
     it('returns a list of DE addresses with a length of 5', function () {
-        assert.equal(addresses.addresses.length, 5);
+        assert.equal(addresses.length, 5);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of DE addresses`, function () {
             assert.equal(singleAddress.country, 'DE')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('EU ES Address Data', function () {
@@ -34,23 +34,23 @@ describe('EU ES Address Data', function () {
 
     it('returns a random ES address', function () {
         assert.equal(address.country, 'ES');
-    });
+    })
 
     it('returns a list of ES addresses with a length of 5', function () {
-        assert.equal(addresses.addresses.length, 5);
+        assert.equal(addresses.length, 5);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of ES addresses`, function () {
             assert.equal(singleAddress.country, 'ES')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('EU UK Address Data', function () {
@@ -59,21 +59,21 @@ describe('EU UK Address Data', function () {
 
     it('returns a random UK address', function () {
         assert.equal(address.country, 'UK');
-    });
+    })
 
     it('returns a list of UK addresses with a length of 5', function () {
-        assert.equal(addresses.addresses.length, 5);
+        assert.equal(addresses.length, 5);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of UK addresses`, function () {
             assert.equal(singleAddress.country, 'UK')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })

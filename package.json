@@ -1,18 +1,19 @@
 {
   "name": "dad-tool",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Dummy Address Data (DAD) - Retrieve real addresses from all around the world.",
   "main": "index.js",
   "engines": {
     "node": ">=12"
   },
   "scripts": {
-    "test": "_mocha",
-    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test",
+    "lint": "npx eslint --ignore-pattern 'node_modules' --ignore-pattern 'coverage' .",
+    "test": "_mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Justintime50/dad.git"
+    "url": "git+https://github.com/Justintime50/dad-node.git"
   },
   "keywords": [
     "dummy",

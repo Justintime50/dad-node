@@ -9,23 +9,23 @@ describe('US AZ Address Data', function () {
 
     it('returns a random AZ address', function () {
         assert.equal(address.state, 'AZ');
-    });
+    })
 
     it('returns a list of AZ addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of AZ addresses`, function () {
             assert.equal(singleAddress.state, 'AZ')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US CA Address Data', function () {
@@ -34,23 +34,23 @@ describe('US CA Address Data', function () {
 
     it('returns a random CA address', function () {
         assert.equal(address.state, 'CA');
-    });
+    })
 
     it('returns a list of CA addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of CA addresses`, function () {
             assert.equal(singleAddress.state, 'CA')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US ID Address Data', function () {
@@ -59,23 +59,23 @@ describe('US ID Address Data', function () {
 
     it('returns a random ID address', function () {
         assert.equal(address.state, 'ID');
-    });
+    })
 
     it('returns a list of ID addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of ID addresses`, function () {
             assert.equal(singleAddress.state, 'ID')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US KS Address Data', function () {
@@ -84,23 +84,23 @@ describe('US KS Address Data', function () {
 
     it('returns a random KS address', function () {
         assert.equal(address.state, 'KS');
-    });
+    })
 
     it('returns a list of KS addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of KS addresses`, function () {
             assert.equal(singleAddress.state, 'KS')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US NV Address Data', function () {
@@ -109,23 +109,23 @@ describe('US NV Address Data', function () {
 
     it('returns a random NV address', function () {
         assert.equal(address.state, 'NV');
-    });
+    })
 
     it('returns a list of NV addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of NV addresses`, function () {
             assert.equal(singleAddress.state, 'NV')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US NY Address Data', function () {
@@ -134,23 +134,23 @@ describe('US NY Address Data', function () {
 
     it('returns a random NY address', function () {
         assert.equal(address.state, 'NY');
-    });
+    })
 
     it('returns a list of NY addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of NY addresses`, function () {
             assert.equal(singleAddress.state, 'NY')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US OR Address Data', function () {
@@ -159,23 +159,23 @@ describe('US OR Address Data', function () {
 
     it('returns a random OR address', function () {
         assert.equal(address.state, 'OR');
-    });
+    })
 
     it('returns a list of OR addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of OR addresses`, function () {
             assert.equal(singleAddress.state, 'OR')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US TX Address Data', function () {
@@ -184,23 +184,23 @@ describe('US TX Address Data', function () {
 
     it('returns a random TX address', function () {
         assert.equal(address.state, 'TX');
-    });
+    })
 
     it('returns a list of TX addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of TX addresses`, function () {
             assert.equal(singleAddress.state, 'TX')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US UT Address Data', function () {
@@ -209,23 +209,23 @@ describe('US UT Address Data', function () {
 
     it('returns a random UT address', function () {
         assert.equal(address.state, 'UT');
-    });
+    })
 
     it('returns a list of UT addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of UT addresses`, function () {
             assert.equal(singleAddress.state, 'UT')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
 
 describe('US WA Address Data', function () {
@@ -234,21 +234,21 @@ describe('US WA Address Data', function () {
 
     it('returns a random WA address', function () {
         assert.equal(address.state, 'WA');
-    });
+    })
 
     it('returns a list of WA addresses with a length of 100', function () {
-        assert.equal(addresses.addresses.length, 100);
+        assert.equal(addresses.length, 100);
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`returns "${singleAddress.street1}" from a list of WA addresses`, function () {
             assert.equal(singleAddress.state, 'WA')
-        });
+        })
     })
 
-    addresses.addresses.forEach(function (singleAddress) {
+    addresses.forEach(function (singleAddress) {
         it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
             expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
-        });
-    });
+        })
+    })
 })
