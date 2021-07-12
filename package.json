@@ -7,8 +7,9 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "_mocha",
-    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test",
+    "lint": "npx eslint --ignore-pattern 'node_modules' --ignore-pattern 'coverage' .",
+    "test": "_mocha"
   },
   "repository": {
     "type": "git",
