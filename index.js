@@ -10,14 +10,14 @@ function list(data) {
 
 // Pull a single random address from a list
 function random(data) {
-    const random = require(path.join(__dirname, dataRouter.variables(data)))
-    const address = random.addresses[Math.floor(Math.random() * random.addresses.length)]
+    const randomAddress = require(path.join(__dirname, dataRouter.variables(data)))
+    const address = randomAddress[Math.floor(Math.random() * randomAddress.length)]
     return address
 }
 
 // Get a list of all ISO country codes
 function isoCountryCodes() {
-    const isoData = require('./data/iso-data/country-codes.json')
+    const isoData = require('./data/other/country-codes.min.json')
     return isoData
 }
 
