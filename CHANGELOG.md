@@ -3,6 +3,8 @@
 ## v4.0.0 (2021-07-12)
 
 * Separates DAD address data into a separate repo (https://github.com/justintime50/dad), removes tooling and references to data and focuses instead on implementing a way to retrieve that data via Node
+* Removed the `addresses` key as inherently each list is a set of addresses already
+* Bumped dependencies, additional small tweaks
 
 ## v3.1.0 (2021-05-26)
 
