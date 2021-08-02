@@ -29,7 +29,9 @@ jobs:
         with:
           node-version: ${{ matrix.nodeversion }}
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          submodule init && submodule update
       - name: Run tests
         run: npm run coverage
       - name: Coveralls
