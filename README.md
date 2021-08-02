@@ -35,51 +35,51 @@ The following files can be found in the `data` directory.
 
 ## Australia
 
-| Filename                    | Locations       | Address Count | Tag    |
-| --------------------------- | --------------- | ------------- | ------ |
-| australia/vt-addresses.json | Victoria Area   | 5             | AU_VT  |
+| Locations       | Tag   |
+| --------------- | ----- |
+| Victoria Area   | AU_VT |
 
 ## Canada
 
-| Filename                 | Locations       | Address Count | Tag    |
-| ------------------------ | --------------- | ------------- | ------ |
-| canada/bc-addresses.json | BC Area         | 5             | CA_BC  |
+| Locations       | Tag   |
+| --------------- | ----- |
+| BC Area         | CA_BC |
 
 ## China
 
-| Filename                | Locations                 | Address Count | Tag    |
-| ----------------------- | ------------------------- | ------------- | ------ |
-| china/bj-addresses.json | Beijing Area              | 5             | CN_BJ  |
-| china/hk-addresses.json | Hong Kong - Wan Chai Area | 5             | CN_HK  |
+| Locations                 | Tag   |
+| ------------------------- | ----- |
+| Beijing Area              | CN_BJ |
+| Hong Kong - Wan Chai Area | CN_HK |
 
 ## Europe
 
-| Filename                 | Locations                     | Address Count | Tag    |
-| ------------------------ | ----------------------------- | ------------- | ------ |
-| europe/de-addresses.json | Germany - Wesel Area          | 5             | EU_DE  |
-| europe/es-addresses.json | Spain - Countrywide           | 5             | EU_ES  |
-| europe/uk-addresses.json | United Kingdom - England Area | 5             | EU_UK  |
+| Locations                     | Tag   |
+| ----------------------------- | ----- |
+| Germany - Wesel Area          | EU_DE |
+| Spain - Countrywide           | EU_ES |
+| United Kingdom - England Area | EU_UK |
 
 ## Mexico
 
-| Filename                 | Locations                     | Address Count | Tag    |
-| ------------------------ | ----------------------------- | ------------- | ------ |
-| mexico/mx-addresses.json | Mexico - Mexico City Area     | 5             | MX_MX  |
+| Locations                     | Tag   |
+| ----------------------------- | ----- |
+| Mexico - Mexico City Area     | MX_MX |
 
 ## United States
 
-| Filename                        | Locations                 | Address Count | Tag    |
-| ------------------------------- | ------------------------- | ------------- | ------ |
-| united-states/az-addresses.json | Arizona - Gilbert Area    | 100           | US_AZ  |
-| united-states/ca-addresses.json | California - Anaheim Area | 100           | US_CA  |
-| united-states/id-addresses.json | Idaho - Boise Area        | 100           | US_ID  |
-| united-states/ks-addresses.json | Kansas - Barton County    | 100           | US_KS  |
-| united-states/nv-addresses.json | Nevada - Lincoln Area     | 100           | US_NV  |
-| united-states/ny-addresses.json | New York - Rochester Area | 100           | US_NY  |
-| united-states/or-addresses.json | Oregon - Portland Area    | 100           | US_OR  |
-| united-states/tx-addresses.json | Texas - Austin Area       | 100           | US_TX  |
-| united-states/ut-addresses.json | Utah - Provo Area         | 100           | US_UT  |
-| united-states/wa-addresses.json | Washington - Spokane Area | 100           | US_WA  |
+| Locations                 | Tag   |
+| ------------------------- | ----- |
+| Arizona - Gilbert Area    | US_AZ |
+| California - Anaheim Area | US_CA |
+| Idaho - Boise Area        | US_ID |
+| Kansas - Barton County    | US_KS |
+| Nevada - Lincoln Area     | US_NV |
+| New York - Rochester Area | US_NY |
+| Oregon - Portland Area    | US_OR |
+| Texas - Austin Area       | US_TX |
+| Utah - Provo Area         | US_UT |
+| Washington - Spokane Area | US_WA |
 
 ## Usage
 
@@ -149,6 +149,9 @@ npm run test
 
 # Run test coverage
 npm run coverage
+
+# Update the DAD data files
+git submodule update --remote dad
 ```
 
 ## Attribution

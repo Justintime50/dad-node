@@ -17,7 +17,7 @@ function random(data) {
 
 // Get a list of all ISO country codes
 function isoCountryCodes() {
-    const isoData = require('./data/other/country-codes.min.json')
+    const isoData = require('./dad/src/other/country-codes.min.json')
     return isoData
 }
 
