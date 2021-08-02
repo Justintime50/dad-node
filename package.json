@@ -1,6 +1,6 @@
 {
   "name": "dad-tool",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Dummy Address Data (DAD) - Retrieve real addresses from all around the world.",
   "main": "index.js",
   "engines": {

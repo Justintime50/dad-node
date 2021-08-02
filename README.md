@@ -23,7 +23,6 @@ npm i -g dad-tool
 
 # Install locally for package implementation
 npm i dad-tool
-git submodule init && git submodule update
 ```
 
 ## Address Data

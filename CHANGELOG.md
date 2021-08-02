@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v4.1.0 (2021-08-02)
+
+* Swaps the manually downloaded DAD data to a git submodule for easier management moving forward
+* Reworks the entire `data-router` from a switch/case statement to an object literal for easier management. Refactored the order of logic and changed all variable names for easier readability
+* Tags will not automatically be capatilized when passed as parameters to assist in capitilization input errors
+* Bumps dependencies
+
 ## v4.0.0 (2021-07-12)
 
 * Separates DAD address data into a separate repo (https://github.com/justintime50/dad), removes tooling and references to data and focuses instead on implementing a way to retrieve that data via Node

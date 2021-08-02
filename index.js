@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
-const dataRouter = require('./lib/data-router')
+const dataRouter = require('./lib/dataRouter')
 
 // Pull an entire list of addresses
 function list(data) {
