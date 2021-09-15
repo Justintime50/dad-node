@@ -9,7 +9,7 @@ Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 [![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
 [![Licence](https://img.shields.io/github/license/justintime50/dad-node)](https://opensource.org/licenses/mit-license.php)
 
-<img src="assets/showcase.png" alt="Showcase">
+<img src="https://raw.githubusercontent.com/justintime50/assets/main/src/dad/showcase.png" alt="Showcase">
 
 </div>
 
@@ -157,4 +157,3 @@ git submodule update --remote dad
 ## Attribution
 
 - Addresses provided by [DAD](https://github.com/justintime50/dad).
-- Showcase icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.
