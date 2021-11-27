@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import path from 'path'
-import { readFile } from 'fs/promises'
+import fs from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import * as dataRouter from './lib/dataRouter.js'
@@ -11,7 +11,7 @@ export function list(addressTag) {
   const __dirname = dirname(__filename)
 
   const addressesFile = path.join(__dirname, dataRouter.variables(addressTag))
-  const addressesList = JSON.parse(await readFile(new URL(addressesFile, import.meta.url)))
+  const addressesList = JSON.parse(fs.readFileSync(addressesFile))
 
   return addressesList
 }
@@ -22,15 +22,15 @@ export function random(addressTag) {
   const __dirname = dirname(__filename)
 
   const addressesFile = path.join(__dirname, dataRouter.variables(addressTag))
-  const addressesList = JSON.parse(await readFile(new URL(addressesFile, import.meta.url)))
+  const addressesList = JSON.parse(fs.readFileSync(addressesFile))
   const address = addressesList[Math.floor(Math.random() * addressesList.length)]
 
   return address
 }
-
 // Get a list of all ISO country codes
 export function isoCountryCodes() {
-  const isoData = fs.readFileSync('./dad/src/other/country-codes.min.json')
+  const isoFile = './dad/src/other/country-codes.min.json'
+  const isoData = JSON.parse(fs.readFileSync(isoFile))
 
   return isoData
 }
