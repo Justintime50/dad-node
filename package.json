@@ -2,10 +2,11 @@
   "name": "dad-tool",
   "version": "4.1.0",
   "description": "Dummy Address Data (DAD) - Retrieve real addresses from all around the world.",
-  "main": "index.js",
+  "exports": "./index.js",
   "engines": {
     "node": ">=12"
   },
+  "type": "module",
   "scripts": {
     "coverage": "nyc --reporter=lcov --reporter=text npm run test",
     "lint": "npx eslint --ignore-pattern 'node_modules' --ignore-pattern 'coverage' .",

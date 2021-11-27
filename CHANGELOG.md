@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v5.0.0 (TODO)
+
+* Converts from CommonJS to ES6
+
 ## v4.1.0 (2021-08-02)
 
 * Swaps the manually downloaded DAD data to a git submodule for easier management moving forward
