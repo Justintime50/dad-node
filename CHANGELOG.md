@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## v5.0.0 (TODO)
+## v5.0.0 (2021-11-27)
 
-* Converts from CommonJS to ES6
+* Converts from CommonJS to ES6 ([read this](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) for more details)
+* Bumps all dev dependencies
 
 ## v4.1.0 (2021-08-02)
 
