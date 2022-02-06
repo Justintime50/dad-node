@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v4.2.0 (2022-02-05)
+
+* Adds French addresses
+* Bumps dev dependencies
+
 ## v4.1.0 (2021-08-02)
 
 * Swaps the manually downloaded DAD data to a git submodule for easier management moving forward
