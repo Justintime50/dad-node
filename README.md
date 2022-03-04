@@ -35,15 +35,15 @@ The following files can be found in the `data` directory.
 
 ## Australia
 
-| Locations       | Tag   |
-| --------------- | ----- |
-| Victoria Area   | AU_VT |
+| Locations     | Tag   |
+| ------------- | ----- |
+| Victoria Area | AU_VT |
 
 ## Canada
 
-| Locations       | Tag   |
-| --------------- | ----- |
-| BC Area         | CA_BC |
+| Locations | Tag   |
+| --------- | ----- |
+| BC Area   | CA_BC |
 
 ## China
 
@@ -63,9 +63,9 @@ The following files can be found in the `data` directory.
 
 ## Mexico
 
-| Locations                     | Tag   |
-| ----------------------------- | ----- |
-| Mexico - Mexico City Area     | MX_MX |
+| Locations                 | Tag   |
+| ------------------------- | ----- |
+| Mexico - Mexico City Area | MX_MX |
 
 ## United States
 
@@ -94,23 +94,23 @@ dad US_UT
 ### Package Implementation
 
 ```javascript
-const dad = require('dad-tool')
+const dad = require('dad-tool');
 
 // Grab a random UT address
-const address = dad.random('US_UT')
-console.log(address)
+const address = dad.random('US_UT');
+console.log(address);
 
 // Alternatively, grab the entire UT list
-const addresses = dad.list('US_UT')
-console.log(addresses)
+const addresses = dad.list('US_UT');
+console.log(addresses);
 
 // Print to console or do whatever you'd like with the address data
-console.log(address.city)
+console.log(address.city);
 
 // Get the list of all ISO country codes
-const isoData = dad.isoCountryCodes()
+const isoData = dad.isoCountryCodes();
 for (let i = 0; i < isoData.length; i++) {
-    console.log(JSON.stringify(isoData[i], null, 4))
+  console.log(JSON.stringify(isoData[i], null, 4));
 }
 ```
 
@@ -120,12 +120,12 @@ A sample address object will look like the following:
 
 ```json
 {
-    "street1": "231 N 1200 W",
-    "street2": "UNIT 104",
-    "city": "OREM",
-    "state": "UT",
-    "zip": "84057",
-    "country": "US"
+  "street1": "231 N 1200 W",
+  "street2": "UNIT 104",
+  "city": "OREM",
+  "state": "UT",
+  "zip": "84057",
+  "country": "US"
 }
 ```
 
@@ -133,9 +133,9 @@ A sample address object will look like the following:
 
 ```json
 {
-    "country": "United States of America",
-    "alpha_2_code": "US",
-    "alpha_3_code": "USA"
+  "country": "United States of America",
+  "alpha_2_code": "US",
+  "alpha_3_code": "USA"
 }
 ```
 
