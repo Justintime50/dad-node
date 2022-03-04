@@ -11,16 +11,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
       - name: Install dependencies
         run: npm install
       - name: Run Eslint
-        run: npm run lint
+        run: |
+          npm run lint
+          npm run format-check
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        nodeversion: ['12', '14', '16', '17']
+        nodeversion: ["12", "14", "16"]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
