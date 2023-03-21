@@ -2,4 +2,5 @@
 .nyc_output
 coverage
 node_modules
+package-lock.json
 test-data-set.json-slim.json
