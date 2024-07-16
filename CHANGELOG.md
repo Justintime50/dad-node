@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v5.0.0 (2024-07-16)
+
+- Drops support for Node < 16
+- Adds support for Node 20, 22
+- Bumps dependencies
+
 ## v4.2.0 (2022-02-05)
 
 - Adds French addresses
@@ -14,7 +20,7 @@
 
 ## v4.0.0 (2021-07-12)
 
-- Separates DAD address data into a separate repo (https://github.com/justintime50/dad), removes tooling and references to data and focuses instead on implementing a way to retrieve that data via Node
+- Separates DAD address data into a separate repo (<https://github.com/justintime50/dad>), removes tooling and references to data and focuses instead on implementing a way to retrieve that data via Node
 - Removed the `addresses` key as inherently each list is a set of addresses already
 - Bumped dependencies, additional small tweaks
 

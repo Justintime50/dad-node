@@ -1,10 +1,10 @@
 {
   "name": "dad-tool",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Dummy Address Data (DAD) - Retrieve real addresses from all around the world.",
   "main": "index.js",
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "scripts": {
     "coverage": "nyc --reporter=lcov --reporter=text npm run test",
@@ -30,14 +30,14 @@
     "dad": "cli.js"
   },
   "devDependencies": {
-    "chai": "^4.3.6",
+    "chai": "^4.4",
     "coveralls": "^3.1.1",
-    "eslint": "^8.10.0",
-    "eslint-plugin-json": "^3.1.0",
-    "justintime50-styles": "0.2.0",
-    "mocha": "^9.2.1",
-    "nyc": "^15.1.0",
-    "prettier": "^2.5.1",
-    "sinon": "^13.0.1"
+    "eslint": "^8.57",
+    "eslint-plugin-json": "^4.0",
+    "justintime50-styles": "0.6.0",
+    "mocha": "^10.6",
+    "nyc": "^17.0",
+    "prettier": "^3.3",
+    "sinon": "^18.0"
   }
 }
