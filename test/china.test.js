@@ -1,11 +1,16 @@
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-const dad = require('../index');
+import { assert, expect } from 'chai';
+
+import { list, random } from '../index.js';
 
 describe('CN BJ Address Data', function () {
-  const address = dad.random('CN_BJ');
-  const addresses = dad.list('CN_BJ');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('CN_BJ');
+    addresses = await list('CN_BJ');
+  });
 
   it('returns a random BJ address', function () {
     assert.equal(address.country, 'CN');
@@ -15,22 +20,27 @@ describe('CN BJ Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of BJ addresses`, function () {
+  it('returns only BJ addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.country, 'CN');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all BJ addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });
 });
 
 describe('CN HK Address Data', function () {
-  const address = dad.random('CN_HK');
-  const addresses = dad.list('CN_HK');
+  let address;
+  let addresses;
+
+  before(async function () {
+    addresses = await list('CN_HK');
+    address = await random('CN_HK');
+  });
 
   it('returns a random HK address', function () {
     assert.equal(address.state, 'Hong Kong');
@@ -40,14 +50,14 @@ describe('CN HK Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of HK addresses`, function () {
+  it('returns only Hong Kong addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.state, 'Hong Kong');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all Hong Kong addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });

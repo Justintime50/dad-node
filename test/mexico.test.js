@@ -1,11 +1,16 @@
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-const dad = require('../index');
+import { assert, expect } from 'chai';
+
+import { list, random } from '../index.js';
 
 describe('MX MX Address Data', function () {
-  const address = dad.random('MX_MX');
-  const addresses = dad.list('MX_MX');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('MX_MX');
+    addresses = await list('MX_MX');
+  });
 
   it('returns a random MX address', function () {
     assert.equal(address.country, 'MX');
@@ -15,14 +20,14 @@ describe('MX MX Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of MX addresses`, function () {
+  it('returns only MX addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.country, 'MX');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all MX addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });

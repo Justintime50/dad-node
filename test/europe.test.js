@@ -1,11 +1,16 @@
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-const dad = require('../index');
+import { assert, expect } from 'chai';
+
+import { list, random } from '../index.js';
 
 describe('EU DE Address Data', function () {
-  const address = dad.random('EU_DE');
-  const addresses = dad.list('EU_DE');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('EU_DE');
+    addresses = await list('EU_DE');
+  });
 
   it('returns a random DE address', function () {
     assert.equal(address.country, 'DE');
@@ -15,22 +20,27 @@ describe('EU DE Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of DE addresses`, function () {
+  it('returns only DE addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.country, 'DE');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all DE addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });
 });
 
 describe('EU ES Address Data', function () {
-  const address = dad.random('EU_ES');
-  const addresses = dad.list('EU_ES');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('EU_ES');
+    addresses = await list('EU_ES');
+  });
 
   it('returns a random ES address', function () {
     assert.equal(address.country, 'ES');
@@ -40,22 +50,27 @@ describe('EU ES Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of ES addresses`, function () {
+  it('returns only ES addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.country, 'ES');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all ES addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });
 });
 
 describe('EU UK Address Data', function () {
-  const address = dad.random('EU_UK');
-  const addresses = dad.list('EU_UK');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('EU_UK');
+    addresses = await list('EU_UK');
+  });
 
   it('returns a random UK address', function () {
     assert.equal(address.country, 'UK');
@@ -65,14 +80,14 @@ describe('EU UK Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of UK addresses`, function () {
+  it('returns only UK addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.country, 'UK');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all UK addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });

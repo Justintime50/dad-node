@@ -1,10 +1,11 @@
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const dad = require('../index');
+import { assert } from 'chai';
+
+import { random } from '../index.js';
 
 describe('Bad Data', function () {
-  it('returns valid data when lowercase tags are passed', function () {
-    const address = dad.random('us_ut');
+  it('returns valid data when lowercase tags are passed', async function () {
+    const address = await random('us_ut');
     assert.equal(address.state, 'UT');
   });
 });

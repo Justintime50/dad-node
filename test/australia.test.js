@@ -1,11 +1,16 @@
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-const dad = require('../index');
+import { assert, expect } from 'chai';
+
+import { list, random } from '../index.js';
 
 describe('AU VT Address Data', function () {
-  const address = dad.random('AU_VT');
-  const addresses = dad.list('AU_VT');
+  let address;
+  let addresses;
+
+  before(async function () {
+    address = await random('AU_VT');
+    addresses = await list('AU_VT');
+  });
 
   it('returns a random VT address', function () {
     assert.equal(address.state, 'VIC');
@@ -15,14 +20,14 @@ describe('AU VT Address Data', function () {
     assert.equal(addresses.length, 5);
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`returns "${singleAddress.street1}" from a list of VT addresses`, function () {
+  it('returns only VIC addresses from the list', function () {
+    addresses.forEach(function (singleAddress) {
       assert.equal(singleAddress.state, 'VIC');
     });
   });
 
-  addresses.forEach(function (singleAddress) {
-    it(`ensures the data structure of "${singleAddress.street1}" is uniform`, function () {
+  it('ensures the data structure of all VIC addresses are uniform', function () {
+    addresses.forEach(function (singleAddress) {
       expect(singleAddress).to.contain.all.keys('street1', 'street2', 'city', 'state', 'zip', 'country');
     });
   });

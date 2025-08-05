@@ -11,7 +11,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Install dependencies
         run: npm install
       - name: Run Eslint
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        nodeversion: ['16', '18', '20', '22']
+        nodeversion: ['16', '18', '20', '22', '24']
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -35,9 +35,4 @@ jobs:
           npm install
           git submodule init && git submodule update
       - name: Run tests
-        run: npm run coverage
-      - name: Coveralls
-        if: github.ref == 'refs/heads/main'
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run test

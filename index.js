@@ -1,26 +1,30 @@
 #!/usr/bin/env node
-const path = require('path');
-const dataRouter = require('./lib/dataRouter');
+import { promises as fs } from 'fs';
+import path, { join } from 'path';
+import { fileURLToPath } from 'url';
+
+import { variables } from './lib/dataRouter.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Pull an entire list of addresses
-function list(data) {
-  const list = require(path.join(__dirname, dataRouter.variables(data)));
-  return list;
+export async function list(data) {
+  const filePath = join(__dirname, variables(data));
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  return JSON.parse(fileContent);
 }
 
 // Pull a single random address from a list
-function random(data) {
-  const randomAddress = require(path.join(__dirname, dataRouter.variables(data)));
-  const address = randomAddress[Math.floor(Math.random() * randomAddress.length)];
+export async function random(data) {
+  const filePath = join(__dirname, variables(data));
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const addressList = JSON.parse(fileContent);
+  const address = addressList[Math.floor(Math.random() * addressList.length)];
   return address;
 }
 
 // Get a list of all ISO country codes
-function isoCountryCodes() {
-  const isoData = require('./dad/src/other/country-codes.min.json');
-  return isoData;
+export async function isoCountryCodes() {
+  const fileContent = await fs.readFile('./dad/src/other/country-codes.min.json', 'utf-8');
+  return JSON.parse(fileContent);
 }
-
-exports.list = list;
-exports.random = random;
-exports.isoCountryCodes = isoCountryCodes;
