@@ -8,7 +8,7 @@
   },
   "scripts": {
     "coverage": "nyc --reporter=lcov --reporter=text npm run test",
-    "lint": "npx eslint --config node_modules/justintime50-styles/src/javascript/eslint.config.js --ignore-pattern 'coverage' .",
+    "lint": "eslint --config node_modules/justintime50-styles/src/javascript/eslint.config.js --ignore-pattern 'coverage' .",
     "fix": "eslint --config node_modules/justintime50-styles/src/javascript/eslint.config.js --ignore-pattern 'coverage' --fix .",
     "format": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --write .",
     "format-check": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --check .",
@@ -30,14 +30,14 @@
     "dad": "cli.js"
   },
   "devDependencies": {
-    "chai": "^4.4",
+    "chai": "^5.2",
     "coveralls": "^3.1.1",
-    "eslint": "^9.0",
+    "eslint": "^9.32",
     "eslint-plugin-json": "^4.0",
-    "justintime50-styles": "0.7.0",
-    "mocha": "^10.6",
-    "nyc": "^17.0",
-    "prettier": "^3.3",
-    "sinon": "^18.0"
+    "justintime50-styles": "0.10.0",
+    "mocha": "^11.7",
+    "nyc": "^17.1",
+    "prettier": "^3.6",
+    "sinon": "^21.0"
   }
 }
