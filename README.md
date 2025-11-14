@@ -5,6 +5,7 @@
 Dummy Address Data (DAD) - Retrieve real addresses from all around the world.
 
 [![Build Status](https://github.com/Justintime50/dad-node/workflows/build/badge.svg)](https://github.com/Justintime50/dad-node/actions)
+[![Coverage Status](https://img.shields.io/codecov/c/github/justintime50/dad-node)](https://app.codecov.io/github/Justintime50/dad-node)
 [![NPM](https://img.shields.io/npm/v/dad-tool)](https://www.npmjs.com/package/dad-tool)
 [![Licence](https://img.shields.io/github/license/justintime50/dad-node)](https://opensource.org/licenses/mit-license.php)
 
