@@ -4,6 +4,9 @@
   "description": "Dummy Address Data (DAD) - Retrieve real addresses from all around the world.",
   "main": "index.js",
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "engines": {
     "node": ">=16"
   },

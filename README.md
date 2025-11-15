@@ -94,21 +94,18 @@ dad US_UT
 ### Package Implementation
 
 ```javascript
-const dad = require('dad-tool');
+import { isoCountryCodes, list, random } from 'dad-tool';
 
-// Grab a random UT address
-const address = dad.random('US_UT');
+// Grab a random Utah address
+const address = random('US_UT');
 console.log(address);
 
-// Alternatively, grab the entire UT list
-const addresses = dad.list('US_UT');
+// Alternatively, grab the entire Utah list
+const addresses = list('US_UT');
 console.log(addresses);
 
-// Print to console or do whatever you'd like with the address data
-console.log(address.city);
-
 // Get the list of all ISO country codes
-const isoData = dad.isoCountryCodes();
+const isoData = isoCountryCodes();
 for (let i = 0; i < isoData.length; i++) {
   console.log(JSON.stringify(isoData[i], null, 4));
 }
